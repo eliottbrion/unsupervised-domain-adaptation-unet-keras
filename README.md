@@ -6,6 +6,6 @@ Our proposed architecture unet\_L$x$ adapts u-net [1] to unsupervised domain ada
 
 ![alt text](unet_L9_cropped.PNG)
 
-References
+*References*
 [1] Ronneberger, O., Fischer, P., & Brox, T. (2015, October). U-net: Convolutional networks for biomedical image segmentation. In International Conference on Medical image computing and computer-assisted intervention (pp. 234-241). Springer, Cham.
 [2] Ganin, Y., & Lempitsky, V. (2014). Unsupervised domain adaptation by backpropagation. arXiv preprint arXiv:1409.7495.
