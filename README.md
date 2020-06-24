@@ -14,7 +14,7 @@ $$
 +\sum_{i=1..N} L_{dom}(\hat{d}_i(\theta_f, \theta_d), d_i)
 $$
 
-where $N$ is the number of example for each domain (i.e., there are $2N$ examples in total). In this loss, $L\textsubscript{seg}$ is the dice loss and encourage both the FE and the LP to learn features useful for source domain image segmentation. The expression $L\textsubscript{dom}$ is the cross-entropy and encourages (i) for the FE, the learning of domain-invariant features, (ii) for the DC, the learning of features allowing to predict whether the features in L$z$ are activated by an input source domain image or target domain image.
+where $N$ is the number of example for each domain (i.e., there are $2N$ examples in total). In this loss, $L_{seg}$ is the dice loss and encourage both the FE and the LP to learn features useful for source domain image segmentation. The expression $L_{dom}$ is the cross-entropy and encourages (i) for the FE, the learning of domain-invariant features, (ii) for the DC, the learning of features allowing to predict whether the features in L$z$ are activated by an input source domain image or target domain image.
 
 The label predictor output is:
 
