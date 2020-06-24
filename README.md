@@ -28,12 +28,12 @@ $$
     \hat{d}_i(\theta_f, \theta_d) = G_d(R_{\lambda}(G_f(\mathbf{x}_i; \theta_f)); \theta_y),
 $$
 
-where $x_i$ is the $i$th input image. In practise, setting $\lambda$ to a fixed value throughout the learning leads to instabilities. To address this issue, we set $\lambda$ to zero during the first $e_0$ epochs (i.e., the FE and the DC learn their task independently) and then increase $\lambda$ linearly until it reaches the value $\lambda_{max}$ after the total number of epochs $n\textsubscript{epochs}:
+where $x_i$ is the $i$th input image. In practise, setting $\lambda$ to a fixed value throughout the learning leads to instabilities. To address this issue, we set $\lambda$ to zero during the first $e_0$ epochs (i.e., the FE and the DC learn their task independently) and then increase $\lambda$ linearly until it reaches the value $\lambda_{max}$ after the total number of epochs $n_{epochs}:
 
 $$
     \lambda(e) = \max \Big(0, \lambda \textsubscript{max} \frac{e-e_0}{n_{epochs}-e_0}\Big),
 $$
-where $e$ is the current epoch. In this expresssion, $\lambda_{max}$, $e_0$ and $n\textsubscript{epochs}$ are hyperparameters.
+where $e$ is the current epoch. In this expresssion, $\lambda_{max}$, $e_0$ and $n_{epochs}$ are hyperparameters.
 
 ![alt text](unet_L9_cropped.PNG)
 
