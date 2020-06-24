@@ -19,7 +19,7 @@ where $N$ is the number of example for each domain (i.e., there are $2N$ example
 The label predictor output is:
 
 $$
-    \hat{y}_i(\theta_f, \theta_y) = G_y(R_\lambda(G_f(\mathbf{x}_i; \theta_f)); \theta_y)
+    \hat{y}_i(\theta_f, \theta_y) = G_y(R_{\lambda}(G_f(\mathbf{x}_i; \theta_f)); \theta_y)
 $$
 
 To estimate the saddle point of $L(\theta_f, \theta_y, \theta_d)$ by backpropagation and to control the strengh of the interaction between the FE and the DC, we follow \cite{ganin2014unsupervised} and use the *gradient reversal layer*, defined as $R_\lambda(\mathbf{x}) = \mathbf{x}$ and $\mathrm{d}R_\lambda(\mathbf{x})/\mathrm{d}\mathbf{x} = -\lambda \mathbf{I}$. The larger $\lambda$, the higher the influence of the DC on the FE. The DC's output then writes:
