@@ -7,7 +7,7 @@ The proposed architecture has three parts: a feature extractor (FE) $G_f(\cdot, 
 Following [1] and [2], this is achieved by finding the saddle point of the following loss function:
 
 $$
-    L_{tot}(\theta_f,\theta_y, \theta_d) = \sum_{\substack{i=1..N \\ d_i=0}} L_{seg}(\hat{y}_i(\theta_f, \theta_y), y_i) + \sum_{i=1..N} L_{dom}(\hat{d}_i(\theta_f, \theta_d), d_i),
+    L_{tot}(\theta_f,\theta_y, \theta_d) = \sum_{i=1..N, d_i=0} L_{seg}(\hat{y}_i(\theta_f, \theta_y), y_i) + \sum_{i=1..N} L_{dom}(\hat{d}_i(\theta_f, \theta_d), d_i),
 $$
 
 where $N$ is the number of example for each domain (i.e., there are $2N$ examples in total). In this loss, $L\textsubscript{seg}$ is the dice loss and encourage both the FE and the LP to learn features useful for source domain image segmentation. The expression $L\textsubscript{dom}$ is the cross-entropy and encourages (i) for the FE, the learning of domain-invariant features, (ii) for the DC, the learning of features allowing to predict whether the features in L$z$ are activated by an input source domain image or target domain image.
