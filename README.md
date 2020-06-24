@@ -7,7 +7,7 @@ The proposed architecture has three parts: a feature extractor (FE) $G_f(\cdot, 
 Following [1] and [2], this is achieved by finding the saddle point of the following loss function:
 
 $$
-    L_{tot}(\theta_f,\theta_y, \theta_d) = \sum_{\substack{i=1..N \\ d_i=0}} L_{seg}(\hat{y}_i(\theta_f, \theta_y), y_i) + \sum_{i=1..N}
+    L_{tot}(\theta_f,\theta_y, \theta_d) = \sum_{\substack{i=1..N \\ d_i=0}} L_{seg}(\hat{y}_i(\theta_f, \theta_y), y_i) + \sum
 $$
 
   + L_{dom}(\hat{d}_i(\theta_f, \theta_d), d_i)
