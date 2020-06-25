@@ -22,7 +22,7 @@ $$
     \hat{y}_i(\theta_f, \theta_y) = G_y((G_f(\mathbf{x}_i; \theta_f); \theta_y)
 $$
 
-To estimate the saddle point of $L(\theta_f, \theta_y, \theta_d)$ by backpropagation and to control the strengh of the interaction between the FE and the DC, we follow [1] and use the *gradient reversal layer*, defined as $R(\mathbf{x}) = \mathbf{x}$ and $\mathrm{d}R(\mathbf{x})/\mathrm{d}\mathbf{x} = -\lambda \mathbf{I}$. The larger $\lambda$, the higher the influence of the DC on the FE. The DC's output then writes:
+To estimate the saddle point of $L(\theta_f, \theta_y, \theta_d)$ by backpropagation and to control the strengh of the interaction between the FE and the DC, we follow [1] and use the *gradient reversal layer*, defined as $R(\mathbf{x}) = \mathbf{x}$ and $\mathrm{d}R(\mathbf{x})/\mathrm{d}\mathbf{x} = -\lambda \mathbf{I}$. The larger $\lambda$, the higher the interaction between DC and FE. The DC's output then writes:
 
 $$
     \hat{d}_i(\theta_f, \theta_y) = G_d(R(G_f(x_i; \theta_f)); \theta_y)
